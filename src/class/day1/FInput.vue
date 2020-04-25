@@ -17,6 +17,8 @@
             onInput(e) {
                 // 通知父组件数值变化
                 this.$emit('input', e.target.value)
+                // 通知父组件进行校验
+                this.$parent.$emit('validate')
             }
         }
     }
